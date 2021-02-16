@@ -19,6 +19,18 @@ public class Ariketa extends JFrame {
     private JRadioButton cRadioButton;
     private JPanel panelMain;
 
+    //Intellijk sortutako constructor eta main:
+    public Ariketa() throws HeadlessException {
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Ariketa");
+        frame.setContentPane(new Ariketa().panelMain);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+    /** Nik hasieran sortutakoa:
     public Ariketa() {
         super("Ariketa1");
         this.setContentPane(panelMain);
@@ -30,4 +42,14 @@ public class Ariketa extends JFrame {
         Ariketa ariketa = new Ariketa();
         ariketa.setVisible(true);
     }
+
+     Intellijk sortutako main:
+     public static void main(String[] args) {
+     JFrame frame = new JFrame("Ariketa");
+     frame.setContentPane(new Ariketa().panelMain);
+     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     frame.pack();
+     frame.setVisible(true);
+     }
+     */
 }
