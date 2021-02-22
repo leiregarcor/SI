@@ -67,14 +67,11 @@ public class labGUI extends JFrame {
 	}
 
 
-
-
-
 	
 	private JPanel getGbl_panel(int pL, int pZ) {
 
-		 JLabel lblNewLabel = new JLabel();
-		 JTextField textField = new JTextField();
+		 JLabel lblNewLabel;
+		 JTextField textField;
 		
 		if (gbl_panel == null) {
 			gbl_panel = new JPanel();
@@ -89,7 +86,7 @@ public class labGUI extends JFrame {
 			gbc_lblNewLabel.weighty = 0.33;
 			gbc_lblNewLabel.gridx = 0;
 			gbc_lblNewLabel.gridy = 0;
-			gbl_panel.add(getLblNewLabel(lblNewLabel, pL, pZ), gbc_lblNewLabel);
+			gbl_panel.add(getLblNewLabel(pL, pZ), gbc_lblNewLabel);
 			GridBagConstraints gbc_textField = new GridBagConstraints();
 			gbc_textField.gridheight = 2;
 			gbc_textField.weightx = 0.66;
@@ -97,22 +94,19 @@ public class labGUI extends JFrame {
 			gbc_textField.fill = GridBagConstraints.BOTH;
 			gbc_textField.gridx = 0;
 			gbc_textField.gridy = 1;
-			gbl_panel.add(getTextField(textField), gbc_textField);
+			gbl_panel.add(getTextField(), gbc_textField);
 		}
 		return gbl_panel;
 	}
 	
-	private JLabel getLblNewLabel(JLabel lblNewLabel, int pL, int pZ) {
-		if (lblNewLabel == null) {
-			lblNewLabel = new JLabel("L"+pL+"Z"+pZ);
-		}
-		return lblNewLabel;
+	private JLabel getLblNewLabel( int pL, int pZ) {
+		
+		return	 new JLabel("L"+pL+"Z"+pZ);
+		
 	}
-	private JTextField getTextField(JTextField textField) {
-		if (textField == null) {
-			textField = new JTextField();
-			textField.setColumns(10);
-		}
+	private JTextField getTextField() {
+		JTextField textField = new JTextField();
+		textField.setColumns(10);
 		return textField;
 	}
 }
