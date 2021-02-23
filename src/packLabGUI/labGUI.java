@@ -16,8 +16,8 @@ import java.awt.Insets;
 public class labGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JPanel gridLayoutPane;
-	private JPanel gbl_panel;
+	private JPanel panelGridLayout;
+	//private JPanel gbl_panel;
 
 	/**
 	 * Launch the application.
@@ -45,23 +45,23 @@ public class labGUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-		contentPane.add(getGridLayoutPane(), BorderLayout.CENTER);
+		contentPane.add(getPanelGridLayout(), BorderLayout.CENTER);
 	}
 
-	private JPanel getGridLayoutPane() {
-		if (gridLayoutPane == null) {
-			gridLayoutPane = new JPanel();
-			gridLayoutPane.setLayout(new GridLayout(3, 3, 0, 0));
+	private JPanel getPanelGridLayout() {
+		if (panelGridLayout == null) {
+			panelGridLayout = new JPanel();
+			panelGridLayout.setLayout(new GridLayout(3, 3, 0, 0));
 			//gridLayoutPane.add(getGbl_panel());
 			this.matrizeaSortu();
 		}
-		return gridLayoutPane;
+		return panelGridLayout;
 	}
 	
 	private void matrizeaSortu() {
 		for(int l=0;l<3;l++) {
 			for(int z=0;z<3;z++) {
-				gridLayoutPane.add(getGbl_panel(l, z));
+				panelGridLayout.add(getGbl_panel(l, z));
 			}
 		}
 	}
@@ -70,11 +70,11 @@ public class labGUI extends JFrame {
 	
 	private JPanel getGbl_panel(int pL, int pZ) {
 
-		 JLabel lblNewLabel;
-		 JTextField textField;
+		 //JLabel lblNewLabel;
+		// JTextField textField;
 		
-		if (gbl_panel == null) {
-			gbl_panel = new JPanel();
+		//if (gbl_panel == null) {
+			JPanel gbl_panel = new JPanel();
 			GridBagLayout gbl_gbl_panel = new GridBagLayout();
 			gbl_gbl_panel.columnWidths = new int[] {0};
 			gbl_gbl_panel.rowHeights = new int[] {0, 0, 0};
@@ -89,13 +89,15 @@ public class labGUI extends JFrame {
 			gbl_panel.add(getLblNewLabel(pL, pZ), gbc_lblNewLabel);
 			GridBagConstraints gbc_textField = new GridBagConstraints();
 			gbc_textField.gridheight = 2;
-			gbc_textField.weightx = 0.66;
+			gbc_textField.gridwidth = 1;
+			gbc_textField.weightx = 0.76;
+			gbc_textField.weighty = 0.75;
 			gbc_textField.insets = new Insets(0, 0, 5, 0);
-			gbc_textField.fill = GridBagConstraints.BOTH;
 			gbc_textField.gridx = 0;
 			gbc_textField.gridy = 1;
+			gbc_textField.fill = GridBagConstraints.BOTH;
 			gbl_panel.add(getTextField(), gbc_textField);
-		}
+//		}
 		return gbl_panel;
 	}
 	
