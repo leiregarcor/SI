@@ -83,7 +83,7 @@ public class GUIGert extends JDialog {
 					public void actionPerformed(ActionEvent e) {
 						if (passwordField.getText().equals ("is2021")) {
 							setVisible(false);
-							labGUI l= new labGUI();
+							BigarrenLehioa l= new BigarrenLehioa();
 							l.main(null);
 						}
 						else {
