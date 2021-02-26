@@ -46,6 +46,7 @@ public class labGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		contentPane.add(getPanelGridLayout(), BorderLayout.CENTER);
+		setLocationRelativeTo(null) ;
 	}
 
 	private JPanel getPanelGridLayout() {
