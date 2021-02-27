@@ -11,6 +11,8 @@ import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
 import java.awt.Insets;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -92,8 +94,11 @@ public class BigarrenLehioa extends JFrame {
 		
 		JButton btnNewButton = new JButton("Exit");
 		btnNewButton.setBounds(53, 30, 66, 23);
+		btnNewButton.setHorizontalAlignment(SwingConstants.CENTER);
+		btnNewButton.setVerticalAlignment(SwingConstants.CENTER);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
 			}
 		});
 		panel_3.setLayout(null);
