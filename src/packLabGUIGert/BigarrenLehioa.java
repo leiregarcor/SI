@@ -12,11 +12,16 @@ import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import javax.swing.JTextField;
 import java.awt.Insets;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class BigarrenLehioa extends JFrame {
 
 	private JPanel contentPane;
 	private JPanel panelGridLayout;
+	private JTextField textField_1;
+	private JTextField textField_2;
 	//private JPanel gbl_panel;
 
 	/**
@@ -46,6 +51,53 @@ public class BigarrenLehioa extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		contentPane.add(getPanelGridLayout(), BorderLayout.CENTER);
+		
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.EAST);
+		panel.setLayout(new GridLayout(3, 1, 0, 0));
+		
+		JPanel panel_1 = new JPanel();
+		panel.add(panel_1);
+		
+		JPanel panel_2 = new JPanel();
+		panel.add(panel_2);
+		panel_2.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		JPanel panel_4 = new JPanel();
+		panel_2.add(panel_4);
+		
+		JLabel lblNewLabel = new JLabel("Label");
+		panel_4.add(lblNewLabel);
+		
+		textField_1 = new JTextField();
+		panel_4.add(textField_1);
+		textField_1.setColumns(10);
+		
+		JPanel panel_5 = new JPanel();
+		panel_2.add(panel_5);
+		
+		JLabel lblNewLabel_1 = new JLabel("TField");
+		panel_5.add(lblNewLabel_1);
+		
+		textField_2 = new JTextField();
+		panel_5.add(textField_2);
+		textField_2.setColumns(10);
+		
+		JPanel panel_6 = new JPanel();
+		panel_2.add(panel_6);
+		panel_6.setLayout(null);
+		
+		JPanel panel_3 = new JPanel();
+		panel.add(panel_3);
+		
+		JButton btnNewButton = new JButton("Exit");
+		btnNewButton.setBounds(53, 30, 66, 23);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_3.setLayout(null);
+		panel_3.add(btnNewButton);
 		setLocationRelativeTo(null) ;
 	}
 
