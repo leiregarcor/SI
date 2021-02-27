@@ -186,6 +186,7 @@ public class BigarrenLehioa extends JFrame {
 //		}
 		return gbl_panel;
 	}
+
 	
 	private JLabel getLblNewLabel( int pL, int pZ) {
 		
