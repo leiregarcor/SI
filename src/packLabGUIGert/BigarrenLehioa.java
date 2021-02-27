@@ -1,6 +1,7 @@
 package packLabGUIGert;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,6 +10,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.GridBagConstraints;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -22,8 +25,8 @@ public class BigarrenLehioa extends JFrame {
 
 	private JPanel contentPane;
 	private JPanel panelGridLayout;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField label_textF;
+	private JTextField tField_textF;
 	//private JPanel gbl_panel;
 
 	/**
@@ -71,9 +74,9 @@ public class BigarrenLehioa extends JFrame {
 		JLabel lblNewLabel = new JLabel("Label");
 		panel_4.add(lblNewLabel);
 		
-		textField_1 = new JTextField();
-		panel_4.add(textField_1);
-		textField_1.setColumns(10);
+		label_textF = new JTextField();
+		panel_4.add(label_textF);
+		label_textF.setColumns(10);
 		
 		JPanel panel_5 = new JPanel();
 		panel_2.add(panel_5);
@@ -81,28 +84,53 @@ public class BigarrenLehioa extends JFrame {
 		JLabel lblNewLabel_1 = new JLabel("TField");
 		panel_5.add(lblNewLabel_1);
 		
-		textField_2 = new JTextField();
-		panel_5.add(textField_2);
-		textField_2.setColumns(10);
+		tField_textF = new JTextField();
+		panel_5.add(tField_textF);
+		tField_textF.setColumns(10);
 		
 		JPanel panel_6 = new JPanel();
 		panel_2.add(panel_6);
 		panel_6.setLayout(null);
 		
+		JButton btnOK = new JButton("Ok");
+		btnOK.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if() {
+					
+				}
+				else {
+					Component controllingFrame = null;
+					JOptionPane.showMessageDialog(controllingFrame ,
+			                "Sartu duzun Labela okerra da. Saiatu berriro",
+			                "Errore mezua",
+			                JOptionPane.ERROR_MESSAGE);
+					label_textF.setText(null);
+					tField_textF.setText(null);	
+					label_textF.requestFocus();
+					
+				}
+			}
+		});
+		btnOK.setBounds(51, 3, 68, 21);
+		btnOK.setHorizontalAlignment(SwingConstants.CENTER);
+		btnOK.setVerticalAlignment(SwingConstants.CENTER);
+		panel_6.add(btnOK);
+		
 		JPanel panel_3 = new JPanel();
 		panel.add(panel_3);
 		
-		JButton btnNewButton = new JButton("Exit");
-		btnNewButton.setBounds(53, 30, 66, 23);
-		btnNewButton.setHorizontalAlignment(SwingConstants.CENTER);
-		btnNewButton.setVerticalAlignment(SwingConstants.CENTER);
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnExit = new JButton("Exit");
+		btnExit.setBounds(53, 30, 66, 23);
+		btnExit.setHorizontalAlignment(SwingConstants.CENTER);
+		btnExit.setVerticalAlignment(SwingConstants.CENTER);
+		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
 		panel_3.setLayout(null);
-		panel_3.add(btnNewButton);
+		panel_3.add(btnExit);
 		setLocationRelativeTo(null) ;
 	}
 
