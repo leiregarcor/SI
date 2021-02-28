@@ -95,8 +95,8 @@ public class BigarrenLehioa extends JFrame {
 		JButton btnOK = new JButton("Ok");
 		btnOK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				if() {
+				boolean a = true;
+				if(a) {
 					
 				}
 				else {
