@@ -97,6 +97,9 @@ public class BigarrenLehioa extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				boolean a = true;
 				if(a) {
+					label.setText(label_textF.getText());
+					textField.setText(tField_textF.getText());
+					
 					
 				}
 				else {
@@ -189,13 +192,15 @@ public class BigarrenLehioa extends JFrame {
 
 	
 	private JLabel getLblNewLabel( int pL, int pZ) {
+		JLabel label = new JLabel("L"+pL+"Z"+pZ);
 		
-		return	 new JLabel("L"+pL+"Z"+pZ);
+		return	label ;
+		
 		
 	}
 	private JTextField getTextField() {
 		JTextField textField = new JTextField();
-		textField.setColumns(10);
+		textField.setColumns(10);		
 		return textField;
 	}
 }
