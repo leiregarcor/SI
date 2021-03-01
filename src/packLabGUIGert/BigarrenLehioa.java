@@ -19,6 +19,8 @@ import javax.swing.SwingConstants;
 import java.awt.Insets;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 
 public class BigarrenLehioa extends JFrame {
@@ -27,6 +29,7 @@ public class BigarrenLehioa extends JFrame {
 	private JPanel panelGridLayout;
 	private JTextField label_textF;
 	private JTextField tField_textF;
+	private JPanel azkenAukeratutakoaJPanel;
 	//private JPanel gbl_panel;
 
 	/**
@@ -97,8 +100,8 @@ public class BigarrenLehioa extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				boolean a = true;
 				if(a) {
-					label.setText(label_textF.getText());
-					textField.setText(tField_textF.getText());
+					//label.setText(label_textF.getText());
+					//textField.setText(tField_textF.getText());
 					
 					
 				}
@@ -186,6 +189,40 @@ public class BigarrenLehioa extends JFrame {
 			gbc_textField.gridy = 1;
 			gbc_textField.fill = GridBagConstraints.BOTH;
 			gbl_panel.add(getTextField(), gbc_textField);
+			gbl_panel.addMouseListener(new MouseListener() {
+				
+				@Override
+				public void mouseReleased(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mousePressed(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseExited(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					// TODO Auto-generated method stub
+					JLabel aJLabel = (JLabel) gbl_panel.getComponent(0); //label
+					aJLabel.setText("a");
+					
+				}
+			});
 //		}
 		return gbl_panel;
 	}
