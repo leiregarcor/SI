@@ -9,6 +9,8 @@ import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -19,7 +21,7 @@ import Eredua.GestorSemaforos;
 
 import javax.swing.JButton;
 
-public class SemaforoPeatones extends JFrame{
+public class SemaforoPeatones extends JFrame implements Observer {
 
 	private static final long serialVersionUID = 820323745068010478L;
 	private JPanel contentPane;
@@ -34,6 +36,7 @@ public class SemaforoPeatones extends JFrame{
 	public SemaforoPeatones() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		initialize();
+		GestorSemaforos.getGestorSemaforos().addObserver(this);
 	}
 
 	private void initialize() {
@@ -113,5 +116,23 @@ public class SemaforoPeatones extends JFrame{
 		public void actionPerformed(ActionEvent e) {
 			GestorSemaforos.getGestorSemaforos().ponerVerde();
 		}
+	}
+	@Override
+	public void update(Observable o, Object arg) {
+		// TODO Auto-generated method stub
+		//System.out.println("peatones");
+		GestorSemaforos g= GestorSemaforos.getGestorSemaforos();
+		lblCont.setText(g.getContador()+"");
+		if(!g.estaVerde()) {
+			lblCont.setForeground(Color.RED);
+			luzVerde.setActivo(false);
+			luzRoja.setActivo(true);
+		}
+		else {
+			lblCont.setForeground(Color.GREEN);
+			luzVerde.setActivo(true);
+			luzRoja.setActivo(false);
+		}
+		
 	}
 }

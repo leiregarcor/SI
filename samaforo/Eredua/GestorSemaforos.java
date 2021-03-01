@@ -1,10 +1,12 @@
 package Eredua;
 
+import java.util.Observable;
 import java.util.Timer;
 import java.util.TimerTask;
 
 /** SEMAFOROA KUDEATZEKO EREDUA*/
-public class GestorSemaforos {
+//obser
+public class GestorSemaforos extends Observable {
 	private static GestorSemaforos mGestorSemaforos = new GestorSemaforos();
 	private boolean estaVerde;
 	private static final int PERIODO = 15;
@@ -31,9 +33,11 @@ public class GestorSemaforos {
 			cont = PERIODO;
 			estaVerde = !estaVerde;
 		}
+		
 		//Ereduaren egoera kontrolatik atera
 		System.out.printf("EREDUAREN EGOERA-> estaVerde : %b   Cont: %d\n", estaVerde, cont);
-		
+		setChanged();
+		notifyObservers();
 	}
 	
 	public static GestorSemaforos getGestorSemaforos() {
@@ -53,6 +57,8 @@ public class GestorSemaforos {
 		if (!estaVerde()) {
 			cont = PERIODO;
 			estaVerde = true;
+			setChanged();
+			notifyObservers();
 		}
 	}
 }
