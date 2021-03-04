@@ -17,7 +17,7 @@ public class Ikasle {
 	private String eposta;
 	private double azterketaNota;
 	private String herrialde;
-	private List<Entregagarri> entregagarriZerr = new ArrayList<Entregagarri>() ;
+	private List<Entregagarri> entregagarriZerr = new ArrayList<Entregagarri>();
 
 	public Ikasle(String pIzen, String pAbizen, String pEposta,  String pHerrialde)
 	{

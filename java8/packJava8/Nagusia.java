@@ -202,7 +202,8 @@ public class Nagusia {
 		Map<String,Double> maa= nSI.notaMaximoaHerrialdekaLortu();
 		maa.forEach((key,value) -> System.out.println("key "+key+", value "+ value));
 		System.out.println(" ");
-
+		
+		System.out.println(" AMAITUTA ");
 
 
 
