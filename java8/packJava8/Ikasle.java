@@ -62,8 +62,8 @@ public class Ikasle {
 			//average bueltatzen du OptionalDouble (fluxuko elementuen bb)
 		//optional<T>: Fluxuko elementu bakoitzari funtzio bat aplikatu, eta emaitza fluxu berri batean bueltatu.
 			//-hutsik dagoen jakiteko: isPresent
-			//â€“ balioa eskatzeko: get
-			//â€“ defektuzko balioa hutsik badago: orElse
+			//– balioa eskatzeko: get
+			//– defektuzko balioa hutsik badago: orElse
 		return entregagarriZerr.stream()
 				.mapToDouble(Entregagarri::getNota)
 				.average()
