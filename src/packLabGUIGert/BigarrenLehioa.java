@@ -200,6 +200,10 @@ public class BigarrenLehioa extends JFrame {
 				@Override
 				public void mousePressed(MouseEvent e) {
 					// TODO Auto-generated method stub
+					JLabel aJLabel = (JLabel) gbl_panel.getComponent(0); //label
+					label_textF.setText(aJLabel.getText()); //label textField-ean agertuko da aukeratutako GridBagLayout-eko label-aren balioa
+					aJLabel.setText("a"); //  aukeratutako GridBagLayout-eko label-aren balioa "a" izatera aldatu
+					
 					
 				}
 				
@@ -218,8 +222,8 @@ public class BigarrenLehioa extends JFrame {
 				@Override
 				public void mouseClicked(MouseEvent e) {
 					// TODO Auto-generated method stub
-					JLabel aJLabel = (JLabel) gbl_panel.getComponent(0); //label
-					aJLabel.setText("a");
+					/**JLabel aJLabel = (JLabel) gbl_panel.getComponent(0); //label
+					aJLabel.setText("a");*/
 					
 				}
 			});
