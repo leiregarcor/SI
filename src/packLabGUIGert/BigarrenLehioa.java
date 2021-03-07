@@ -29,7 +29,7 @@ public class BigarrenLehioa extends JFrame {
 	private JPanel panelGridLayout;
 	private JTextField label_textF;
 	private JTextField tField_textF;
-	private JPanel azkenAukeratutakoaJPanel;
+	private JPanel unekoJPanel;
 	//private JPanel gbl_panel;
 
 	/**
@@ -200,12 +200,16 @@ public class BigarrenLehioa extends JFrame {
 				@Override
 				public void mousePressed(MouseEvent e) {
 					// TODO Auto-generated method stub
+					
+					
 					JLabel aJLabel = (JLabel) gbl_panel.getComponent(0); //label
 					
 					label_textF.setText(aJLabel.getText()); //label textField-ean agertuko da aukeratutako GridBagLayout-eko label-aren balioa
 					aJLabel.setText("a"); //  aukeratutako GridBagLayout-eko label-aren balioa "a" izatera aldatu
 					
 					JTextField aJTextField = (JTextField) gbl_panel.getComponent(1); // JTextField
+					
+					tField_textF.setText(aJTextField.getText());
 					aJTextField.setText("holi");
 				}
 				
