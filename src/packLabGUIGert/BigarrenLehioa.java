@@ -1,12 +1,15 @@
 package packLabGUIGert;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+
 import java.awt.GridLayout;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
@@ -100,6 +103,11 @@ public class BigarrenLehioa extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				boolean a = true;
 				if(a) {
+					
+					//JTextField aJTextField = (JTextField) unekoJPanel.getComponent(1); // JTextField
+					
+					//tField_textF.setText(aJTextField.getText());
+					
 					//label.setText(label_textF.getText());
 					//textField.setText(tField_textF.getText());
 					
@@ -200,9 +208,13 @@ public class BigarrenLehioa extends JFrame {
 				@Override
 				public void mousePressed(MouseEvent e) {
 					// TODO Auto-generated method stub
-					
+					//unekoJPanel = (JPanel) gbl_panel.getLayout();
+					//unekoJPanel.setBorder(new LineBorder(Color.blue,2));
 					
 					JLabel aJLabel = (JLabel) gbl_panel.getComponent(0); //label
+					
+					//JLabel aJLabel = (JLabel) unekoJPanel.getComponent(0); //label EZ DU FUNTZIONATZEN
+					
 					
 					label_textF.setText(aJLabel.getText()); //label textField-ean agertuko da aukeratutako GridBagLayout-eko label-aren balioa
 					aJLabel.setText("a"); //  aukeratutako GridBagLayout-eko label-aren balioa "a" izatera aldatu
