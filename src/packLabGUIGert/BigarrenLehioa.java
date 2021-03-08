@@ -148,7 +148,6 @@ public class BigarrenLehioa extends JFrame {
 		setLocationRelativeTo(null) ;
 	}
 
-	
 	private JPanel getPanelGridLayout() {
 		if (panelGridLayout == null) {
 			panelGridLayout = new JPanel();
@@ -158,6 +157,7 @@ public class BigarrenLehioa extends JFrame {
 		}
 		return panelGridLayout;
 	}
+	
 	
 	private void matrizeaSortu() {
 		for(int l=0;l<3;l++) {
