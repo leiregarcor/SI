@@ -104,7 +104,7 @@ public class BigarrenLehioa extends JFrame {
 				boolean a = true;
 				if(a) {
 					
-					//JTextField aJTextField = (JTextField) unekoJPanel.getComponent(1); // JTextField
+					JTextField aJTextField = (JTextField) unekoJPanel.getComponent(1); // JTextField
 					
 					//tField_textF.setText(aJTextField.getText());
 					
@@ -208,12 +208,12 @@ public class BigarrenLehioa extends JFrame {
 				@Override
 				public void mousePressed(MouseEvent e) {
 					// TODO Auto-generated method stub
-					//unekoJPanel = (JPanel) gbl_panel.getLayout();
+					unekoJPanel =  gbl_panel;
 					//unekoJPanel.setBorder(new LineBorder(Color.blue,2));
 					
-					JLabel aJLabel = (JLabel) gbl_panel.getComponent(0); //label
+					//JLabel aJLabel = (JLabel) gbl_panel.getComponent(0); //label
 					
-					//JLabel aJLabel = (JLabel) unekoJPanel.getComponent(0); //label EZ DU FUNTZIONATZEN
+					JLabel aJLabel = (JLabel) unekoJPanel.getComponent(0); //label EZ DU FUNTZIONATZEN
 					
 					
 					label_textF.setText(aJLabel.getText()); //label textField-ean agertuko da aukeratutako GridBagLayout-eko label-aren balioa
