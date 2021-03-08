@@ -148,6 +148,7 @@ public class BigarrenLehioa extends JFrame {
 		setLocationRelativeTo(null) ;
 	}
 
+	
 	private JPanel getPanelGridLayout() {
 		if (panelGridLayout == null) {
 			panelGridLayout = new JPanel();
