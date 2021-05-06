@@ -28,12 +28,15 @@ public class OfertaKatalogoa {
 	public void printHelburuPosibleak(String pJat){
 		ofertakol.stream()
 				.filter(p->p.jatorriaDa(pJat))
-				.forEach(p -> System.out.println(p.getHelburu()));;
+				.forEach(p -> System.out.println(p.getHelburu()));
 	}
 	
 	//2 ariketa
 	public void printHelburuPosibleak2(String pOrigen){
-		//TODO
+		ofertakol.stream()
+				.map(Oferta::getHelburu)
+				.distinct()
+				.forEach(p -> System.out.println(p));
 	}
 /*
 	//3 ariketa

@@ -29,7 +29,11 @@ public class Nagusia {
 				ok.addOferta(o3);
 				
 		//ARIKETAK
+		//1.
 		ok.printHelburuPosibleak("a");
+
+		//2.
+		ok.printHelburuPosibleak2("a");
 	}
 
 }
