@@ -30,9 +30,11 @@ public class Nagusia {
 				
 		//ARIKETAK
 		//1.
+		System.out.println(" 1. ariketa");
 		ok.printHelburuPosibleak("a");
 
 		//2.
+		System.out.println(" 2. ariketa");
 		ok.printHelburuPosibleak2("a");
 	}
 
