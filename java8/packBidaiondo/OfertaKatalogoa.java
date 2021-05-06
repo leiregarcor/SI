@@ -25,32 +25,29 @@ public class OfertaKatalogoa {
 	}
 	
 	//1 ariketa
-	public void printHelburuPosibleak(String pJat)
-	{
-		//TODO
+	public void printHelburuPosibleak(String pJat){
+		ofertakol.stream()
+				.filter(p->p.jatorriaDa(pJat))
+				.forEach(p -> System.out.println(p.getHelburu()));;
 	}
 	
 	//2 ariketa
-	public void printHelburuPosibleak2(String pOrigen)
-	{
+	public void printHelburuPosibleak2(String pOrigen){
 		//TODO
 	}
-	
+/*
 	//3 ariketa
-	public List<Oferta> getJatorrizOrdenatutakoOfertak()
-	{
+	public List<Oferta> getJatorrizOrdenatutakoOfertak(){
 		//TODO
 	}
 	
 	//4 ariketa
-	public List<Oferta> getJatorrizHelburuzOrdenatutakoOfertak()
-	{
+	public List<Oferta> getJatorrizHelburuzOrdenatutakoOfertak(){
 		//TODO
 	}
 	
 	//5 ariketa	
-	public List<Oferta> getEstaziodunOfertak(String pHiri)
-	{
+	public List<Oferta> getEstaziodunOfertak(String pHiri){
 		//TODO
 	}
 	
@@ -60,14 +57,14 @@ public class OfertaKatalogoa {
 	}
 	
 	//7 ariketa
-	public Map<String,Oferta> getOfertaMinEstazioJatorri()
-	{
+	public Map<String,Oferta> getOfertaMinEstazioJatorri(){
 		//TODO
 	}
 	
 	//8 ariketa
-	public Map<String,Integer> getMinEstazioJatorri()
-	{
+	public Map<String,Integer> getMinEstazioJatorri(){
 		//TODO		
 	}
+*/
+
 }

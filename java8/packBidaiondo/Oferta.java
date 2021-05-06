@@ -52,8 +52,7 @@ public class Oferta {
 		return this.jatorri;
 	}
 	
-	public float kalkKostu()
-	{
+	public float kalkKostu(){
 		return (float) estazioKol.stream().
 				mapToDouble(e->e.getKostu()).sum();
 			
