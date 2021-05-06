@@ -38,12 +38,14 @@ public class OfertaKatalogoa {
 				.distinct()
 				.forEach(p -> System.out.println(p));
 	}
-/*
+
 	//3 ariketa
 	public List<Oferta> getJatorrizOrdenatutakoOfertak(){
-		//TODO
+		return ofertakol.stream()
+				.sorted(comparing(Oferta::getJatorri))
+				.collect(toList());
 	}
-	
+/*
 	//4 ariketa
 	public List<Oferta> getJatorrizHelburuzOrdenatutakoOfertak(){
 		//TODO
