@@ -19,4 +19,8 @@ public class Artikulu {
     public boolean hainbatEgileDitu() {
         return egileKol.size()>1;
     }
+
+    public int zenbNazionalitateak(){
+
+    }
 }

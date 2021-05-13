@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class JasotakoArtikuluak {
@@ -11,5 +12,10 @@ public class JasotakoArtikuluak {
     public static JasotakoArtikuluak getJA()
     {
         return nJA;
+    }
+
+    public List<Artikulu> nazionalitateaOrdenatu(){
+        return artikuluKol.stream()
+                .sorted(Comparator.comparing(Artik))
     }
 }
